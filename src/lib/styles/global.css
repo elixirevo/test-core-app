@@ -2,6 +2,7 @@
   --font-body: 'Pretendard Variable';
   --text-primary-color: #fff;
   --text-secondary-color: #000;
+  --primary-color: #1fdada;
   --white: #fff;
   --black: #000;
   --gray: #ccc;
@@ -11,4 +12,10 @@ body {
   background-color: var(--black);
   color: var(--text-primary-color);
   font-family: var(--font-body);
+  letter-spacing: 0.6px;
+}
+
+a {
+  color: var(--text-primary-color);
+  text-decoration: none;
 }

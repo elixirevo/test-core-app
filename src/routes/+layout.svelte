@@ -7,12 +7,12 @@
 
 <div class="background">
 	<Nav />
-	<slot></slot>
+	<slot />
 </div>
 
 <style>
 	.background {
-		background-image: url('$lib/images/background/test-main.png');
+		background-image: url('$lib/images/background/main.png');
 		background-size: cover;
 		background-position: center;
 		height: 100vh;
