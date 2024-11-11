@@ -3,9 +3,11 @@
   --text-primary-color: #fff;
   --text-secondary-color: #000;
   --primary-color: #1fdada;
+  --secondary-color: #2b2d30;
   --white: #fff;
   --black: #000;
   --gray: #ccc;
+  --font-emphasis: 600;
 }
 
 body {
@@ -18,4 +20,8 @@ body {
 a {
   color: var(--text-primary-color);
   text-decoration: none;
+}
+
+button {
+  color: var(--text-primary-color);
 }

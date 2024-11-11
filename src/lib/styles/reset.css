@@ -38,6 +38,16 @@ input, button, textarea, select{
   font: inherit; 
 }
 
+button {
+  background: inherit;
+  border:none;
+  box-shadow:none;
+  border-radius:0;
+  padding:0;
+  overflow:visible;
+  cursor:pointer
+}
+
 @media (prefers-reduced-motion: reduce){
   html:focus-within {
       scroll-behavior: auto;

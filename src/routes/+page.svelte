@@ -2,16 +2,24 @@
 	//
 </script>
 
-<div class="content">
-	<h1>Welcome to SvelteKit</h1>
-	<p>
-		Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation
-	</p>
+<div class="content-wrap">
+	<div class="vision-box md-box">
+		<h1>Welcome to SvelteKit</h1>
+		<p>
+			Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation
+		</p>
+	</div>
 </div>
 
 <style>
-	.content {
+	.content-wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		padding: 20px;
-		height: 3000px;
+	}
+	.md-box {
+		width: 1000px;
+		height: 800px;
 	}
 </style>

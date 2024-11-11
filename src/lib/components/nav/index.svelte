@@ -1,5 +1,6 @@
 <script lang="ts">
 	import logo from '$lib/images/logo/logo.png';
+	import profileImage from '$lib/images/test/profile_image.png';
 </script>
 
 <nav>
@@ -29,8 +30,21 @@
 			<a href="/test">Docs</a>
 		</div>
 	</div>
+	<!-- <div class="user-wrap">
+		<button class="middle-button"> Sign In </button>
+	</div> -->
 	<div class="user-wrap">
-		<!--  -->
+		<div class="user-box">
+			<div class="user-profile-image">
+				<img class="user-profile-image" src={profileImage} alt="profile-img" />
+			</div>
+			<div class="user-profile-info">
+				<div class="user-name">@John_Doe</div>
+				<div class="user-wallet">0x123456789AB</div>
+				<!-- 지갑연결 구현 -->
+				<!-- <button class="user-wallet-connect">Wallet Connect</button> -->
+			</div>
+		</div>
 	</div>
 </nav>
 
@@ -47,6 +61,7 @@
 		display: grid;
 		grid-template-columns: 200px 1fr 200px;
 		gap: 10px;
+		z-index: 1000;
 	}
 
 	.logo-wrap {
@@ -64,7 +79,7 @@
 
 	.menu-content {
 		padding: 0 16px;
-		font-weight: 600;
+		font-weight: var(--font-emphasis);
 		font-size: 1.1rem;
 	}
 
@@ -80,6 +95,54 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: green;
+		/* background-color: green; */
+	}
+
+	.user-box {
+		display: flex;
+		width: 100%;
+		height: 50px;
+		/* background-color: aquamarine; */
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.user-profile-image {
+		display: flex;
+		width: 50px;
+		height: 50px;
+	}
+
+	.user-profile-image img {
+		width: 100%;
+	}
+
+	.user-profile-info {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		font-size: 1.15rem;
+		height: 46px;
+		justify-content: space-between;
+	}
+
+	.user-name {
+		font-size: 1.2rem;
+		font-weight: var(--font-emphasis);
+	}
+
+	.user-wallet {
+		font-size: 1rem;
+		height: 20px;
+		font-weight: 300;
+	}
+
+	.user-wallet-connect {
+		width: 100%;
+		background-color: blue;
+		padding: 1px 4px;
+		border-radius: 5px;
+		font-size: 0.95rem;
+		font-weight: 500;
 	}
 </style>
