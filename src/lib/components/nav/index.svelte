@@ -1,6 +1,16 @@
 <script lang="ts">
 	import logo from '$lib/images/logo/logo.png';
 	import profileImage from '$lib/images/test/profile_image.png';
+
+	const navMenu = [
+		{ name: 'dashboard', link: '/test' },
+		{ name: 'drops', link: '/test' },
+		{ name: 'core', link: '/test' },
+		{ name: 'gear', link: '/test' },
+		{ name: 'launchpad', link: '/test' },
+		{ name: 'refferal', link: '/test' },
+		{ name: 'docs', link: '/test' }
+	];
 </script>
 
 <nav>
@@ -8,27 +18,11 @@
 		<img src={logo} alt="Logo" width="50" height="50" />
 	</div>
 	<div class="menu-wrap">
-		<div class="menu-content">
-			<a href="/test">Dashboard</a>
-		</div>
-		<div class="menu-content">
-			<a href="/test">Drops</a>
-		</div>
-		<div class="menu-content">
-			<a href="/test">Core</a>
-		</div>
-		<div class="menu-content">
-			<a href="/test">Gear</a>
-		</div>
-		<div class="menu-content">
-			<a href="/test">Launchpad</a>
-		</div>
-		<div class="menu-content">
-			<a href="/test">Refferal</a>
-		</div>
-		<div class="menu-content">
-			<a href="/test">Docs</a>
-		</div>
+		{#each navMenu as item}
+			<div class="menu-content">
+				<a href={item.link}>{item.name.toUpperCase()}</a>
+			</div>
+		{/each}
 	</div>
 	<!-- <div class="user-wrap">
 		<button class="middle-button"> Sign In </button>
@@ -40,9 +34,9 @@
 			</div>
 			<div class="user-profile-info">
 				<div class="user-name">@John_Doe</div>
-				<div class="user-wallet">0x123456789AB</div>
+				<!-- <div class="user-wallet">0x123456789AB</div> -->
 				<!-- 지갑연결 구현 -->
-				<!-- <button class="user-wallet-connect">Wallet Connect</button> -->
+				<button class="user-wallet-connect">Wallet Connect</button>
 			</div>
 		</div>
 	</div>
@@ -80,7 +74,7 @@
 	.menu-content {
 		padding: 0 16px;
 		font-weight: var(--font-emphasis);
-		font-size: 1.1rem;
+		font-size: 1rem;
 	}
 
 	.menu-content a:hover {
@@ -127,7 +121,7 @@
 	}
 
 	.user-name {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 		font-weight: var(--font-emphasis);
 	}
 
@@ -144,5 +138,62 @@
 		border-radius: 5px;
 		font-size: 0.95rem;
 		font-weight: 500;
+	}
+
+	@media (max-width: 1280px) {
+		/* fhd 대응 */
+		nav {
+			grid-template-columns: 160px 1fr 160px;
+		}
+		.menu-content {
+			padding: 0 12px;
+			font-size: 0.85rem;
+		}
+		.user-box {
+			height: 40px;
+			gap: 0.8rem;
+		}
+		.user-profile-image {
+			width: 40px;
+			height: 40px;
+		}
+		.user-profile-info {
+			height: 36px;
+		}
+		.user-name {
+			font-size: 0.9rem;
+		}
+
+		.user-wallet {
+			font-size: 0.8rem;
+			height: 20px;
+		}
+
+		.user-wallet-connect {
+			font-size: 0.8rem;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		nav {
+			height: 70px;
+			padding: 0px 28px;
+			grid-template-columns: 100px;
+			gap: 0px;
+		}
+		.menu-wrap {
+			display: none;
+		}
+		.user-wrap {
+			display: none;
+		}
+	}
+
+	@media (max-width: 768px) {
+		/* 모바일 대응 */
+	}
+
+	@media (max-width: 480px) {
+		/* 모바일 대응 */
 	}
 </style>

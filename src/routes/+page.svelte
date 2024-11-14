@@ -5,9 +5,8 @@
 <div class="content-wrap">
 	<div class="vision-box md-box">
 		<h1>Welcome to SvelteKit</h1>
-		<p>
-			Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation
-		</p>
+		asdad
+		<h4>asdassd</h4>
 	</div>
 </div>
 
@@ -17,9 +16,11 @@
 		justify-content: center;
 		align-items: center;
 		padding: 20px;
+		height: calc(100% - 80px);
+		overflow: auto;
 	}
 	.md-box {
 		width: 1000px;
-		height: 800px;
+		height: 600px;
 	}
 </style>

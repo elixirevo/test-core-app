@@ -15,6 +15,7 @@ body {
   color: var(--text-primary-color);
   font-family: var(--font-body);
   letter-spacing: 0.6px;
+  font-size: 1rem;
 }
 
 a {
@@ -24,4 +25,20 @@ a {
 
 button {
   color: var(--text-primary-color);
+}
+
+@media (max-width: 1280px) {
+  /* FHD 대응 */
+}
+
+@media (max-width: 1024px) {
+  /* 태블릿 대응 */
+}
+
+@media (max-width: 768px) {
+  /* 모바일 대응 */
+}
+
+@media (max-width: 480px) {
+  /* 모바일 대응 */
 }
