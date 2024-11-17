@@ -3,7 +3,12 @@
 </script>
 
 <div class="content-wrap">
-	<div class="vision-box md-box">
+	<div class="vision-style-background vision-box md-box">
+		<h1>Welcome to SvelteKit</h1>
+		asdad
+		<h4>asdassd</h4>
+	</div>
+	<div class="vision-style-background vision-box md-box">
 		<h1>Welcome to SvelteKit</h1>
 		asdad
 		<h4>asdassd</h4>
@@ -11,16 +16,9 @@
 </div>
 
 <style>
-	.content-wrap {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 20px;
-		height: calc(100% - 80px);
-		overflow: auto;
-	}
 	.md-box {
-		width: 1000px;
-		height: 600px;
+		width: 600px;
+		height: 80vh;
+		max-height: 900px;
 	}
 </style>

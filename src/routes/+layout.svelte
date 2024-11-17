@@ -3,11 +3,11 @@
 	import '$lib/styles/global.css';
 	import '$lib/styles/fonts.css';
 	import '$lib/styles/ui.css';
-	import Nav from '$lib/components/nav/index.svelte';
+	import Navbar from '$lib/components/nav/navbar.svelte';
 </script>
 
 <div class="background">
-	<Nav />
+	<Navbar />
 	<slot />
 </div>
 

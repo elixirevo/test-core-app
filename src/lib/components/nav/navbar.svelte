@@ -1,6 +1,19 @@
 <script lang="ts">
+	import LoginModal from '$lib/components/login/loginModal.svelte';
+
 	import logo from '$lib/images/logo/logo.png';
 	import profileImage from '$lib/images/test/profile_image.png';
+
+	const loginInfo = {
+		isLogin: false,
+		userName: 'John_Doe',
+		walletAddress: '0x123456789AB'
+	};
+
+	const walletInfo = {
+		isConnected: false,
+		walletAddress: '0x123456789AB'
+	};
 
 	const navMenu = [
 		{ name: 'dashboard', link: '/test' },
@@ -13,7 +26,15 @@
 	];
 </script>
 
-<nav>
+{#if loginInfo.isLogin}
+	<LoginModal
+		on:click={() => {
+			loginInfo.isLogin = !loginInfo.isLogin;
+		}}
+	/>
+{/if}
+
+<nav class="vision-style-background">
 	<div class="logo-wrap">
 		<img src={logo} alt="Logo" width="50" height="50" />
 	</div>
@@ -24,27 +45,39 @@
 			</div>
 		{/each}
 	</div>
-	<!-- <div class="user-wrap">
-		<button class="middle-button"> Sign In </button>
-	</div> -->
-	<div class="user-wrap">
-		<div class="user-box">
-			<div class="user-profile-image">
-				<img class="user-profile-image" src={profileImage} alt="profile-img" />
-			</div>
-			<div class="user-profile-info">
-				<div class="user-name">@John_Doe</div>
-				<!-- <div class="user-wallet">0x123456789AB</div> -->
-				<!-- 지갑연결 구현 -->
-				<button class="user-wallet-connect">Wallet Connect</button>
+	{#if loginInfo.isLogin}
+		<div class="user-wrap">
+			<div class="user-box">
+				<div class="user-profile-image">
+					<img class="user-profile-image" src={profileImage} alt="profile-img" />
+				</div>
+				<div class="user-profile-info">
+					<div class="user-name">@John_Doe</div>
+					{#if walletInfo.isConnected}
+						<div class="user-wallet">0x123456789AB</div>
+					{:else}
+						<!-- 지갑연결 구현 -->
+						<button class="user-wallet-connect">Wallet Connect</button>
+					{/if}
+				</div>
 			</div>
 		</div>
-	</div>
+	{:else}
+		<div class="user-wrap">
+			<button
+				class="middle-button"
+				on:click={() => {
+					loginInfo.isLogin = true;
+				}}
+			>
+				Log In
+			</button>
+		</div>
+	{/if}
 </nav>
 
 <style>
 	nav {
-		background-color: rgba(0, 0, 0, 0.5);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 		position: sticky;
@@ -55,12 +88,11 @@
 		display: grid;
 		grid-template-columns: 200px 1fr 200px;
 		gap: 10px;
-		z-index: 1000;
+		z-index: 10;
 	}
 
 	.logo-wrap {
 		display: flex;
-		/* justify-content: center; */
 		align-items: center;
 		/* background-color: red; */
 	}
