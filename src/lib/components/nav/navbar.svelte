@@ -1,8 +1,9 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import LoginModal from '$lib/components/login/loginModal.svelte';
 
-	import logo from '$lib/images/logo/logo.png';
-	import profileImage from '$lib/images/test/profile_image.png';
+	import logo from '$lib/assets/logo/logo.png';
+	import profileImage from '$lib/assets/test/profile_image.png';
 
 	const loginInfo = {
 		isLogin: false,
@@ -82,7 +83,7 @@
 		-webkit-backdrop-filter: blur(10px);
 		position: sticky;
 		width: 100vw;
-		height: 80px;
+		height: 70px;
 		top: 0;
 		padding: 0px 48px;
 		display: grid;
@@ -95,6 +96,10 @@
 		display: flex;
 		align-items: center;
 		/* background-color: red; */
+	}
+
+	.logo-wrap img {
+		width: 36px;
 	}
 
 	.menu-wrap {
@@ -223,6 +228,14 @@
 
 	@media (max-width: 768px) {
 		/* 모바일 대응 */
+		nav {
+			height: 60px;
+			padding: 0px 30px;
+		}
+		.user-profile-image {
+			width: 30px;
+			height: 30px;
+		}
 	}
 
 	@media (max-width: 480px) {

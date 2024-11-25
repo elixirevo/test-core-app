@@ -1,4 +1,5 @@
 <script lang="ts">
+	import logo from '$lib/assets/logo/logo.png';
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -6,8 +7,11 @@
 <div class="modal-wrap" on:click|self>
 	<div class="vision-style-background vision-box modal-box">
 		<div class="modal-head">
+			<div class="button-wrap">
+				<button class="icon-button" on:click>X</button>
+			</div>
 			<div class="logo">
-				<img src="src/lib/images/logo/logo.png" alt="Logo" width="50" height="50" />
+				<img src={logo} alt="Logo" width="50" height="50" />
 			</div>
 			<div class="modal-title">
 				<h2>Log In / Sign Up</h2>
@@ -44,6 +48,12 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
+		width: 100%;
+	}
+
+	.button-wrap {
+		display: flex;
+		justify-content: flex-end;
 		width: 100%;
 	}
 
