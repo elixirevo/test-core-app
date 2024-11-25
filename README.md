@@ -3,7 +3,7 @@
 ## development
 
 ```bash
-pnpm dev --open
+pnpm dev --open --host
 ```
 
 ## Building
