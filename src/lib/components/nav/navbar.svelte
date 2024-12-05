@@ -1,9 +1,21 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 	import LoginModal from '$lib/components/login/loginModal.svelte';
 
 	import logo from '$lib/assets/logo/logo.png';
 	import profileImage from '$lib/assets/test/profile_image.png';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
+
+	let navHiddenContentActive = false;
+
+	beforeNavigate(() => {
+		navHiddenContentActive = false;
+	});
+	afterNavigate(() => {
+		setTimeout(() => {
+			navHiddenContentActive = true;
+		}, 1000);
+	});
 
 	const loginInfo = {
 		isLogin: false,
@@ -17,13 +29,30 @@
 	};
 
 	const navMenu = [
-		{ name: 'dashboard', link: '/test' },
-		{ name: 'drops', link: '/test' },
-		{ name: 'core', link: '/test' },
-		{ name: 'gear', link: '/test' },
-		{ name: 'launchpad', link: '/test' },
-		{ name: 'refferal', link: '/test' },
-		{ name: 'docs', link: '/test' }
+		{ name: 'dashboard', link: '/dashboard', children: [] },
+		{ name: 'drops', link: '/test', children: [] },
+		{
+			name: 'core',
+			link: '/core',
+			children: [
+				{ name: 'handover or keep', link: '/core/asset' },
+				{ name: 'asset retrieve', link: '/core/retireve' },
+				{ name: 'retrieve', link: '/core/retireve' },
+				{ name: 'retrieve', link: '/core/retireve' }
+			]
+		},
+		{
+			name: 'gear',
+			link: '/gear',
+			children: [
+				{ name: 'handover or keep', link: '/core/asset' },
+				{ name: 'asset retrieve', link: '/core/retireve' },
+				{ name: 'retrieve', link: '/core/retireve' }
+			]
+		},
+		{ name: 'launchpad', link: '/test', children: [] },
+		{ name: 'refferal', link: '/test', children: [] },
+		{ name: 'docs', link: '/test', children: [] }
 	];
 </script>
 
@@ -37,12 +66,21 @@
 
 <nav class="vision-style-background">
 	<div class="logo-wrap">
-		<img src={logo} alt="Logo" width="50" height="50" />
+		<a href="/">
+			<img src={logo} alt="Logo" width="50" height="50" />
+		</a>
 	</div>
 	<div class="menu-wrap">
-		{#each navMenu as item}
+		{#each navMenu as menu}
 			<div class="menu-content">
-				<a href={item.link}>{item.name.toUpperCase()}</a>
+				<a href={menu.link}>{menu.name.toUpperCase()}</a>
+				{#if menu.children.length > 0}
+					<div class={navHiddenContentActive ? 'menu-hidden-content text-xs' : 'disable'}>
+						{#each menu.children as childrenMenu}
+							<a class="menu-link" href={childrenMenu.link}>{childrenMenu.name.toUpperCase()}</a>
+						{/each}
+					</div>
+				{/if}
 			</div>
 		{/each}
 	</div>
@@ -106,12 +144,14 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		gap: 32px;
 	}
 
 	.menu-content {
-		padding: 0 16px;
+		position: relative;
 		font-weight: var(--font-emphasis);
 		font-size: 1rem;
+		padding: 22px 0;
 	}
 
 	.menu-content a:hover {
@@ -121,6 +161,48 @@
 	.menu-content a:focus {
 		color: var(--primary-color);
 	}
+
+	.menu-hidden-content {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 230px;
+		height: 180px;
+		padding: 28px 30px;
+		background-image: url('$lib/assets/ui/box_sm2.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		opacity: 0;
+		transition: opacity 0.1s linear;
+		transition-delay: 0.2s;
+		pointer-events: none;
+	}
+
+	.menu-content:hover .menu-hidden-content,
+	.menu-hidden-content:hover {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.menu-link {
+		width: 100%;
+		padding: 4px 8px;
+		border-radius: 5px;
+		font-weight: 800;
+	}
+
+	.menu-link:hover {
+		background-color: var(--primary-color) !important;
+		color: #302779 !important;
+	}
+
+	/* .menu-link:focus {
+		background-color: var(--primary-color);
+		color: #302779;
+	} */
 
 	.user-wrap {
 		display: flex;
@@ -182,8 +264,10 @@
 		nav {
 			grid-template-columns: 160px 1fr 160px;
 		}
+		.menu-wrap {
+			gap: 24px;
+		}
 		.menu-content {
-			padding: 0 12px;
 			font-size: 0.85rem;
 		}
 		.user-box {
@@ -230,7 +314,7 @@
 		/* 모바일 대응 */
 		nav {
 			height: 60px;
-			padding: 0px 30px;
+			padding: 0px 20px;
 		}
 		.user-profile-image {
 			width: 30px;

@@ -3,7 +3,7 @@
 	import '$lib/styles/global.css';
 	import '$lib/styles/fonts.css';
 	import '$lib/styles/ui.css';
-	import Navbar from '$lib/components/nav/navbar.svelte';
+	import Navbar from '$lib/components/nav/navBar.svelte';
 </script>
 
 <div class="background">
@@ -85,6 +85,14 @@
 		height: 50px;
 		background-color: #00fff2;
 		position: absolute;
+		bottom: 0px;
+		z-index: 0;
+	}
+
+	.footer {
+		width: 100%;
+		height: 50px;
+		background-color: #00fff2;
 		bottom: 0px;
 		z-index: 0;
 	}

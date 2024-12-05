@@ -3,52 +3,43 @@
 </script>
 
 <div class="content-wrap">
-	<div class="core-style-background-inner md-box">
-		<h1>Welcome to SvelteKit</h1>
-		asdad
-		<h4>asdassd</h4>
+	<div class="core-style-background-inner box-md">
+		<div class="background-dark description">ㅁㄴㅇ</div>
+		<div class="button-wrap">
+			<button class="background-light test-button">
+				<div class="test-button-text text-sm">Test</div>
+			</button>
+			<button class="background-light test-button">
+				<div class="test-button-text text-sm">Test</div>
+			</button>
+		</div>
 	</div>
-	<div class="core-style-background-inner md-box">
-		<h1>Welcome to SvelteKit</h1>
-		asdad
-		<h4>asdassd</h4>
-	</div>
-	<!-- <div class="vision-style-background vision-box md-box">
-		<h1>Welcome to SvelteKit</h1>
-		asdad
-		<h4>asdassd</h4>
-	</div> -->
 </div>
 
 <style>
-	.md-box {
-		width: 550px;
-		height: 100%;
-		max-height: 700px;
+	/*  */
+	.description {
+		width: 100%;
+		height: 200px;
+		overflow: scroll;
+		padding: 1rem;
+		border-radius: 10px;
+	}
+
+	.test-button {
+		width: 170px;
+		height: 40px;
+		padding: 0.5rem;
+		display: flex;
+		justify-content: center;
+		clip-path: polygon(13% 0, 100% 0, 100% 50%, 87% 100%, 0 100%, 0% 50%);
+	}
+
+	.button-wrap {
+		display: flex;
+		gap: 10px;
+		justify-content: flex-end;
+		width: 100%;
 		box-sizing: border-box;
-		padding: 5rem 1rem;
-	}
-
-	@media (max-width: 1280px) {
-		/* FHD 대응 */
-	}
-
-	@media (max-width: 1024px) {
-		/* 태블릿 대응 */
-	}
-
-	@media (max-width: 768px) {
-		/* 모바일 대응 */
-		.md-box {
-			width: 100%;
-			height: 80vh;
-			min-height: 700px;
-			box-sizing: border-box;
-			padding: 5rem 1rem;
-		}
-	}
-
-	@media (max-width: 480px) {
-		/* 모바일 대응 */
 	}
 </style>
