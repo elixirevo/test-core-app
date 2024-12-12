@@ -57,12 +57,6 @@
 		font-weight: 700;
 	}
 
-	.bottom-space {
-		display: block;
-		width: 200px;
-		height: 200px;
-	}
-
 	@media (max-width: 1280px) {
 		/* FHD 대응 */
 	}
