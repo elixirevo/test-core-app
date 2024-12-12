@@ -45,20 +45,6 @@
 		gap: 1rem;
 	}
 
-	.asset-tier {
-		width: 100%;
-		display: flex;
-		justify-content: flex-end;
-		padding: 10px 50px;
-	}
-
-	.asset-title {
-		width: 100%;
-		display: flex;
-		justify-content: flex-start;
-		padding: 10px 50px;
-	}
-
 	@media (max-width: 1280px) {
 		/* FHD 대응 */
 	}

@@ -23,29 +23,27 @@
 
 	const menuList = [
 		{ name: 'dashboard', link: '/dashboard', children: [] },
-		{ name: 'drops', link: '/test', children: [] },
+		{ name: 'drops', link: '/drops', children: [] },
 		{
 			name: 'core',
 			link: '/core',
 			children: [
 				{ name: 'handover or keep', link: '/core/asset' },
 				{ name: 'asset retrieve', link: '/core/retireve' },
-				{ name: 'retrieve', link: '/core/retireve' },
-				{ name: 'retrieve', link: '/core/retireve' }
+				{ name: 'sale', link: '/core/sale' },
+				{ name: 'refferal', link: '/core/refferal' }
 			]
 		},
 		{
 			name: 'gear',
 			link: '/gear',
 			children: [
-				{ name: 'handover or keep', link: '/core/asset' },
-				{ name: 'asset retrieve', link: '/core/retireve' },
-				{ name: 'retrieve', link: '/core/retireve' }
+				{ name: 'mint cStable', link: '/gear/mint' },
+				{ name: 'lockup cStable', link: '/gear/lockup' }
 			]
 		},
-		{ name: 'launchpad', link: '/test', children: [] },
-		{ name: 'refferal', link: '/test', children: [] },
-		{ name: 'docs', link: '/test', children: [] }
+		{ name: 'launchpad', link: '/launchpad', children: [] },
+		{ name: 'docs', link: 'https://www.gitbook.com/', children: [] }
 	];
 </script>
 
