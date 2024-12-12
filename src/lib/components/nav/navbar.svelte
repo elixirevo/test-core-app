@@ -1,68 +1,28 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import LoginModal from '$lib/components/login/loginModal.svelte';
-
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
+	import { navMenuState } from '$lib/states/nav.svelte';
+	import ChevronDownIcon from '$lib/components/icons/ChevronDown.svelte';
 	import logo from '$lib/assets/logo/logo.png';
 	import profileImage from '$lib/assets/test/profile_image.png';
-	import { afterNavigate, beforeNavigate } from '$app/navigation';
+	import UserProfile from './userProfile.svelte';
 
-	let navHiddenContentActive = false;
+	const { userInfo, walletInfo, menuList } = $props();
+	let navHiddenContentActive = $state(false);
 
 	beforeNavigate(() => {
 		navHiddenContentActive = false;
 	});
+
 	afterNavigate(() => {
 		setTimeout(() => {
 			navHiddenContentActive = true;
 		}, 1000);
 	});
 
-	const loginInfo = {
-		isLogin: false,
-		userName: 'John_Doe',
-		walletAddress: '0x123456789AB'
-	};
-
-	const walletInfo = {
-		isConnected: false,
-		walletAddress: '0x123456789AB'
-	};
-
-	const navMenu = [
-		{ name: 'dashboard', link: '/dashboard', children: [] },
-		{ name: 'drops', link: '/test', children: [] },
-		{
-			name: 'core',
-			link: '/core',
-			children: [
-				{ name: 'handover or keep', link: '/core/asset' },
-				{ name: 'asset retrieve', link: '/core/retireve' },
-				{ name: 'retrieve', link: '/core/retireve' },
-				{ name: 'retrieve', link: '/core/retireve' }
-			]
-		},
-		{
-			name: 'gear',
-			link: '/gear',
-			children: [
-				{ name: 'handover or keep', link: '/core/asset' },
-				{ name: 'asset retrieve', link: '/core/retireve' },
-				{ name: 'retrieve', link: '/core/retireve' }
-			]
-		},
-		{ name: 'launchpad', link: '/test', children: [] },
-		{ name: 'refferal', link: '/test', children: [] },
-		{ name: 'docs', link: '/test', children: [] }
-	];
+	$effect(() => {
+		console.log('navMenuState', navMenuState.value);
+	});
 </script>
-
-{#if loginInfo.isLogin}
-	<LoginModal
-		on:click={() => {
-			loginInfo.isLogin = !loginInfo.isLogin;
-		}}
-	/>
-{/if}
 
 <nav class="vision-style-background">
 	<div class="logo-wrap">
@@ -70,8 +30,16 @@
 			<img src={logo} alt="Logo" width="50" height="50" />
 		</a>
 	</div>
+	<div class="menu-mobile-wrap">
+		<button class="menu-mobile-content" onclick={navMenuState.switchNavMenu}>
+			<div class="menu-title">TheCore.Fi</div>
+			<div class="menu-icon" class:rotated={navMenuState.value}>
+				<ChevronDownIcon />
+			</div>
+		</button>
+	</div>
 	<div class="menu-wrap">
-		{#each navMenu as menu}
+		{#each menuList as menu}
 			<div class="menu-content">
 				<a href={menu.link}>{menu.name.toUpperCase()}</a>
 				{#if menu.children.length > 0}
@@ -84,35 +52,7 @@
 			</div>
 		{/each}
 	</div>
-	{#if loginInfo.isLogin}
-		<div class="user-wrap">
-			<div class="user-box">
-				<div class="user-profile-image">
-					<img class="user-profile-image" src={profileImage} alt="profile-img" />
-				</div>
-				<div class="user-profile-info">
-					<div class="user-name">@John_Doe</div>
-					{#if walletInfo.isConnected}
-						<div class="user-wallet">0x123456789AB</div>
-					{:else}
-						<!-- 지갑연결 구현 -->
-						<button class="user-wallet-connect">Wallet Connect</button>
-					{/if}
-				</div>
-			</div>
-		</div>
-	{:else}
-		<div class="user-wrap">
-			<button
-				class="middle-button"
-				on:click={() => {
-					loginInfo.isLogin = true;
-				}}
-			>
-				Log In
-			</button>
-		</div>
-	{/if}
+	<UserProfile {userInfo} {walletInfo} {profileImage} />
 </nav>
 
 <style>
@@ -138,6 +78,10 @@
 
 	.logo-wrap img {
 		width: 36px;
+	}
+
+	.menu-mobile-wrap {
+		display: none;
 	}
 
 	.menu-wrap {
@@ -199,66 +143,6 @@
 		color: #302779 !important;
 	}
 
-	/* .menu-link:focus {
-		background-color: var(--primary-color);
-		color: #302779;
-	} */
-
-	.user-wrap {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		/* background-color: green; */
-	}
-
-	.user-box {
-		display: flex;
-		width: 100%;
-		height: 50px;
-		/* background-color: aquamarine; */
-		align-items: center;
-		gap: 1rem;
-	}
-
-	.user-profile-image {
-		display: flex;
-		width: 50px;
-		height: 50px;
-	}
-
-	.user-profile-image img {
-		width: 100%;
-	}
-
-	.user-profile-info {
-		display: flex;
-		flex-grow: 1;
-		flex-direction: column;
-		font-size: 1.15rem;
-		height: 46px;
-		justify-content: space-between;
-	}
-
-	.user-name {
-		font-size: 1.1rem;
-		font-weight: var(--font-emphasis);
-	}
-
-	.user-wallet {
-		font-size: 1rem;
-		height: 20px;
-		font-weight: 300;
-	}
-
-	.user-wallet-connect {
-		width: 100%;
-		background-color: blue;
-		padding: 1px 4px;
-		border-radius: 5px;
-		font-size: 0.95rem;
-		font-weight: 500;
-	}
-
 	@media (max-width: 1280px) {
 		/* fhd 대응 */
 		nav {
@@ -270,42 +154,47 @@
 		.menu-content {
 			font-size: 0.85rem;
 		}
-		.user-box {
-			height: 40px;
-			gap: 0.8rem;
-		}
-		.user-profile-image {
-			width: 40px;
-			height: 40px;
-		}
-		.user-profile-info {
-			height: 36px;
-		}
-		.user-name {
-			font-size: 0.9rem;
-		}
-
-		.user-wallet {
-			font-size: 0.8rem;
-			height: 20px;
-		}
-
-		.user-wallet-connect {
-			font-size: 0.8rem;
-		}
 	}
 
 	@media (max-width: 1024px) {
 		nav {
 			height: 70px;
 			padding: 0px 28px;
-			grid-template-columns: 100px;
+			grid-template-columns: 50px 1fr 100px;
 			gap: 0px;
 		}
-		.menu-wrap {
-			display: none;
+
+		.menu-mobile-wrap {
+			display: flex;
 		}
-		.user-wrap {
+
+		.menu-mobile-content {
+			display: flex;
+			align-items: center;
+			position: relative;
+			font-weight: var(--font-emphasis);
+			font-size: 1rem;
+			padding: 0px;
+			gap: 4px;
+		}
+
+		.menu-title {
+			font-size: 1.2rem;
+			font-weight: 500;
+		}
+
+		.menu-icon {
+			display: flex;
+			width: 30px;
+			height: 30px;
+			transition: transform 0.5s;
+		}
+
+		.rotated {
+			transform: rotate(-180deg);
+		}
+
+		.menu-wrap {
 			display: none;
 		}
 	}
@@ -314,11 +203,7 @@
 		/* 모바일 대응 */
 		nav {
 			height: 60px;
-			padding: 0px 20px;
-		}
-		.user-profile-image {
-			width: 30px;
-			height: 30px;
+			padding: 0px 30px;
 		}
 	}
 
