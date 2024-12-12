@@ -1,16 +1,19 @@
 <script lang="ts">
+	import { type Snippet } from 'svelte';
 	import '$lib/styles/reset.css';
 	import '$lib/styles/global.css';
 	import '$lib/styles/fonts.css';
 	import '$lib/styles/ui.css';
 	import Nav from '$lib/components/nav/index.svelte';
 	import BackgroundTop from '$lib/components/graphic/backgroundTop.svelte';
+
+	const { children }: { children: Snippet } = $props();
 </script>
 
 <div class="background">
 	<BackgroundTop />
 	<Nav />
-	<slot />
+	{@render children()}
 	<div class="background-bottom-wrap">
 		<div class="left-image"></div>
 		<div class="middle-line"></div>
