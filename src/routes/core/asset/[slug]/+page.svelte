@@ -5,7 +5,7 @@
 </script>
 
 <div class="content-wrap">
-	<div class="core-style-background-inner box-md">
+	<div class="core-style-background box-md">
 		<div class="box-content">
 			<!--  -->
 		</div>
@@ -13,5 +13,4 @@
 </div>
 
 <style>
-	
 </style>

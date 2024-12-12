@@ -26,7 +26,7 @@
 </script>
 
 <div class="content-wrap">
-	<div class="core-style-background-inner box-md">
+	<div class="core-style-background box-md">
 		<div class="box-content">
 			<div class="box-content-top">
 				<div class="text-md">Found 5 Assets</div>
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="core-style-background-inner box-md">
+	<div class="core-style-background box-md">
 		<div class="box-title">
 			<div class="text-md">Select your NFT & FT Asset</div>
 		</div>

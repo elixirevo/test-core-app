@@ -3,7 +3,7 @@
 </script>
 
 <div class="content-wrap">
-	<div class="core-style-background-inner box-md">
+	<div class="core-style-background box-md">
 		<div class="background-dark description">ㅁㄴㅇ</div>
 		<div class="button-wrap">
 			<button class="background-light test-button">
