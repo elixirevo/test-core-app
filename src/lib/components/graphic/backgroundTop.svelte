@@ -60,4 +60,11 @@
 			padding: 0px 15px;
 		}
 	}
+
+	@media (max-height: 500px) {
+		/* 높이 대응 */
+		.background-top-wrap {
+			display: none;
+		}
+	}
 </style>

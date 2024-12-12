@@ -209,5 +209,17 @@
 
 	@media (max-width: 480px) {
 		/* 모바일 대응 */
+		nav {
+			height: 60px;
+			padding: 0px 20px;
+		}
+	}
+
+	@media (max-height: 500px) {
+		/* 높이 대응 */
+		nav {
+			height: 60px;
+			padding: 0px 30px;
+		}
 	}
 </style>

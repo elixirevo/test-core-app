@@ -64,4 +64,11 @@
 	@media (max-width: 480px) {
 		/* 모바일 대응 */
 	}
+
+	@media (max-height: 500px) {
+		/* 높이 대응 */
+		.background {
+			gap: 10px;
+		}
+	}
 </style>

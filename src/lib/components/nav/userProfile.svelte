@@ -22,7 +22,7 @@
 {:else}
 	<div class="user-wrap">
 		<button
-			class="middle-button"
+			class="login-button"
 			onclick={() => {
 				userInfo.isLogin = true;
 			}}
@@ -86,6 +86,22 @@
 		border-radius: 5px;
 		font-size: 0.95rem;
 		font-weight: 500;
+	}
+
+	.login-button {
+		background: rgba(255, 255, 255, 0.1);
+		box-shadow:
+			inset -1.8308px 0px 1.8308px rgba(255, 255, 255, 0.2),
+			inset 2.74619px 2.74619px 1.8308px rgba(255, 255, 255, 0.1);
+		width: 100%;
+		height: 36px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 22px;
+		font-weight: 600;
+		font-size: 1.2rem;
 	}
 	@media (max-width: 1280px) {
 		/* FHD 대응 */
