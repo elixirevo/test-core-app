@@ -36,25 +36,15 @@
 		gap: 2rem;
 	}
 
-	.menu-content {
-		display: flex;
-		flex-direction: column;
-		gap: 0.3rem;
-	}
-
 	.menu-content a {
 		font-size: 2rem;
 		font-weight: 800;
 	}
 
-	.menu-child-content {
-		display: flex;
-		flex-direction: column;
-	}
-
 	.menu-child-content a {
 		font-size: 1.5rem;
 		font-weight: 700;
+		margin-left: 20px;
 	}
 
 	@media (max-width: 1280px) {

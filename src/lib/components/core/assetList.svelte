@@ -1,4 +1,6 @@
 <script>
+	import { goto } from '$app/navigation';
+
 	const { walletAssetList } = $props();
 </script>
 
@@ -13,7 +15,7 @@
 					class="asset-box"
 					type="button"
 					onclick={() => {
-						alert('hello');
+						goto(`/core/asset/${item.id}`);
 					}}
 				>
 					<div class="asset-tier text-sm">{item.tier}</div>

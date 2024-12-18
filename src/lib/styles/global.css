@@ -3,6 +3,7 @@
   --text-primary-color: #fff;
   --text-secondary-color: #000;
   --primary-color: #00fff2;
+  --primary-color-opacity: rgba(0, 255, 242, 0.5);
   --secondary-color: #2b2d30;
   --theme-color: #0a0c41;
   --white: #fff;
@@ -32,6 +33,10 @@ a {
 
 button {
   color: var(--text-primary-color);
+}
+
+input[type='checkbox'] {
+  accent-color: var(--primary-color);
 }
 
 hr {
