@@ -1,4 +1,5 @@
 <script lang="ts">
+	import AssetSummary from '$lib/components/core/assetSummary.svelte';
 	import NftList from '$lib/components/core/nftList.svelte';
 	import type { PageData } from './$types';
 
@@ -110,6 +111,7 @@
 
 <div class="content-wrap">
 	<NftList {userNftList} />
+	<AssetSummary />
 </div>
 
 <style>
