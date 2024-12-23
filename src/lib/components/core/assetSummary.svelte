@@ -32,9 +32,8 @@
 </div>
 
 <style>
-	/*  */
 	.box-md {
-		gap: 5rem;
+		gap: 3rem;
 	}
 	.box-content {
 		display: flex;

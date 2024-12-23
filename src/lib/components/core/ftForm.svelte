@@ -45,7 +45,6 @@
 </div>
 
 <style>
-	/*  */
 	.box-content {
 		display: flex;
 		flex-direction: column;
