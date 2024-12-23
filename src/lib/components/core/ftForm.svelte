@@ -6,14 +6,20 @@
 		<div class="box-content-top">
 			<div class="token-info">
 				<div class="token-name">
-					<div class="token-symbol"></div>
+					<div class="symbol"></div>
+					<div class="token-tick text-sm">Kaia Network</div>
+				</div>
+			</div>
+			<div class="token-info">
+				<div class="token-name">
+					<div class="symbol"></div>
 					<div class="token-tick text-sm">NECTAR</div>
 				</div>
 				<div class="balance text-sm">100000.1111 NTR</div>
 			</div>
 			<div class="tier-info">
 				<div class="token-name">
-					<div class="token-symbol"></div>
+					<div class="symbol"></div>
 					<div class="token-tick text-sm">TIER A</div>
 				</div>
 				<div class="balance text-sm">1000 NECTAR</div>
@@ -91,9 +97,9 @@
 		gap: 0.5rem;
 	}
 
-	.token-symbol {
-		width: 30px;
-		height: 30px;
+	.symbol {
+		width: 25px;
+		height: 25px;
 		background-color: aliceblue;
 		border-radius: 1000px;
 	}
@@ -175,6 +181,9 @@
 			gap: 2rem;
 			overflow: scroll;
 			padding: 0px;
+		}
+		.box-content-top {
+			gap: 0.6rem;
 		}
 
 		.input-box-button {

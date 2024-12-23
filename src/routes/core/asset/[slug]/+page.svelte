@@ -6,6 +6,8 @@
 
 	let { data }: { data: PageData } = $props();
 
+	let type = 'FT';
+
 	const userNftList = [
 		{
 			id: 1,
@@ -111,8 +113,11 @@
 </script>
 
 <div class="content-wrap">
-	<!-- <NftList {userNftList} /> -->
-	<FtForm />
+	{#if type === 'NFT'}
+		<NftList {userNftList} />
+	{:else}
+		<FtForm />
+	{/if}
 	<AssetSummary />
 </div>
 

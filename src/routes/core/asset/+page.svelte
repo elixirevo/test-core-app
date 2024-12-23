@@ -6,27 +6,32 @@
 		{
 			id: 1,
 			tier: 'Tier S',
-			title: 'Clones Never Die'
+			title: 'Clones Never Die',
+			type: 'NFT'
 		},
 		{
 			id: 2,
 			tier: 'Tier A',
-			title: 'Clones Never Die'
+			title: 'Clones Never Die',
+			type: 'FT'
 		},
 		{
 			id: 3,
 			tier: 'Tier B',
-			title: 'Clones Never Die'
+			title: 'Clones Never Die',
+			type: 'FT'
 		},
 		{
 			id: 4,
 			tier: 'Tier C',
-			title: 'Clones Never Die'
+			title: 'Clones Never Die',
+			type: 'FT'
 		},
 		{
 			id: 5,
 			tier: 'Tier D',
-			title: 'Clones Never Die'
+			title: 'Clones Never Die',
+			type: 'FT'
 		}
 	];
 </script>
