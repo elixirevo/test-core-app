@@ -152,7 +152,7 @@
 	}
 
 	.input-box-button {
-		color: var(--gray);
+		color: var(--light);
 		font-size: 0.9rem;
 	}
 
