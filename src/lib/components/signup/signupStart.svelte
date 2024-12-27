@@ -41,10 +41,10 @@
 		</div>
 		<div class="button-wrap">
 			<button class="background-light core-button">
-				<div class="test-button-text text-sm">Cancle</div>
+				<div class="text-sm">Cancle</div>
 			</button>
 			<button class="background-light core-button emphasis-button">
-				<div class="test-button-text text-sm">Agree</div>
+				<div class="text-sm">Agree</div>
 			</button>
 		</div>
 	</div>

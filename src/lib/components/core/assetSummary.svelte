@@ -29,10 +29,10 @@
 				coreState.value = 'HANDOVER';
 			}}
 		>
-			<div class="test-button-text text-sm">Hand Over</div>
+			<div class="text-sm">Hand Over</div>
 		</button>
 		<button class="background-light core-button">
-			<div class="test-button-text text-sm">Keep</div>
+			<div class="text-sm">Keep</div>
 		</button>
 	</div>
 </div>

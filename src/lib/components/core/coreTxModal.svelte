@@ -49,7 +49,7 @@
 			</div>
 			<div class="modal-content-bottom">
 				<button class="background-light core-button">
-					<div class="test-button-text text-sm">Approve</div>
+					<div class="text-sm">Approve</div>
 				</button>
 			</div>
 		</div>
