@@ -57,6 +57,19 @@
   }
 }
 
+.tx-modal-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .vision-box {
   display: flex;
   flex-direction: column;

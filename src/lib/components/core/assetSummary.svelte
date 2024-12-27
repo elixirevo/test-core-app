@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { coreState } from '$lib/states/core.svelte';
 </script>
 
 <div class="core-style-background box-md">
@@ -22,7 +23,12 @@
 		</div>
 	</div>
 	<div class="box-footer">
-		<button class="background-light core-button emphasis-button">
+		<button
+			class="background-light core-button emphasis-button"
+			onclick={() => {
+				coreState.value = 'HANDOVER';
+			}}
+		>
 			<div class="test-button-text text-sm">Hand Over</div>
 		</button>
 		<button class="background-light core-button">

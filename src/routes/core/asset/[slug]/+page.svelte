@@ -1,7 +1,9 @@
 <script lang="ts">
 	import AssetSummary from '$lib/components/core/assetSummary.svelte';
+	import CoreTxModal from '$lib/components/core/coreTxModal.svelte';
 	import FtForm from '$lib/components/core/ftForm.svelte';
 	import NftList from '$lib/components/core/nftList.svelte';
+	import { coreState } from '$lib/states/core.svelte';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -112,6 +114,18 @@
 	];
 </script>
 
+{#if coreState.value === 'HANDOVER'}
+	<CoreTxModal
+		on:click={() => {
+			coreState.value = 'NONE';
+		}}
+	/>
+{:else if coreState.value === 'KEEP'}
+	<!--  -->
+{:else}
+	<!--  -->
+{/if}
+
 <div class="content-wrap">
 	{#if type === 'NFT'}
 		<NftList {userNftList} />
@@ -120,6 +134,3 @@
 	{/if}
 	<AssetSummary />
 </div>
-
-<style>
-</style>
