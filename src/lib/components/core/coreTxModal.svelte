@@ -12,7 +12,7 @@
 			<div class="modal-content-top">
 				<div class="space"></div>
 				<div class="modal-title text-sm">Handover asssets</div>
-				<button class="close" on:click>
+				<button class="icon-button" on:click>
 					<XMark />
 				</button>
 			</div>
@@ -88,12 +88,7 @@
 		justify-content: center;
 		align-items: center;
 	}
-
-	.close {
-		width: 30px;
-		height: 30px;
-	}
-
+	
 	.modal-content-middle {
 		width: 100%;
 		padding: 0px 26px;

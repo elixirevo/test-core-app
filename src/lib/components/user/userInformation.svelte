@@ -28,11 +28,17 @@
 				</div>
 			</div>
 			<div class="user-info-item">
-				<div class="user-info-title text-sm">KYC</div>
+				<div class="user-info-title-wrap">
+					<div class="user-info-title text-sm">KYC</div>
+					<button class="text-button text-xs">Verify</button>
+				</div>
 				<div class="input-box background-dark">You are not verified</div>
 			</div>
 			<div class="user-info-item">
-				<div class="user-info-title text-sm">Wallet</div>
+				<div class="user-info-title-wrap">
+					<div class="user-info-title text-sm">Wallet</div>
+					<button class="text-button text-xs">Add Wallet</button>
+				</div>
 				<div class="input-box background-dark">
 					<input class="input-text" type="text" placeholder="Your Name" />
 				</div>
@@ -104,6 +110,11 @@
 		flex-direction: column;
 		gap: 0.5rem;
 		width: 60%;
+	}
+
+	.user-info-title-wrap {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.input-box {
