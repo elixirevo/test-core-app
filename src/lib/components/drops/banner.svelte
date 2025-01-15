@@ -8,7 +8,7 @@
 	<swiper-container pagination="true" speed="1000" autoplay="true">
 		<swiper-slide>
 			<div class="banner-box">
-				<img src={testImage} loading="lazy" alt="img" />
+				<img src={testImage} alt="img" />
 			</div>
 		</swiper-slide>
 		<swiper-slide>
