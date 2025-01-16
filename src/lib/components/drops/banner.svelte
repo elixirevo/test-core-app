@@ -32,7 +32,8 @@
 <style>
 	.banner-wrap {
 		width: 100%;
-		height: 250px;
+		min-height: 250px;
+		min-height: 250px;
 		max-height: 250px;
 		overflow: hidden;
 	}
