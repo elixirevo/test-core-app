@@ -1,6 +1,6 @@
 <script lang="ts">
 	import testImage from '$lib/assets/background/claim.png';
-	import XLogo from '../icons/X.svelte';
+	import XLogo from '../icons/XLogo.svelte';
 </script>
 
 <div class="wrap">
