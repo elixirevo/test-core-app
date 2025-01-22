@@ -31,7 +31,7 @@
   padding: 0px 30px;
   height: calc(100% - 80px);
   overflow: auto;
-  gap: 30px;
+  gap: 2rem;
 }
 
 .modal-wrap {
@@ -199,7 +199,7 @@
     padding: 0px 14px;
     height: calc(100%);
     overflow: auto;
-    gap: 30px;
+    gap: 2rem;
   }
 
   .text-xs {

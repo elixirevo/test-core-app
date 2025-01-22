@@ -37,6 +37,7 @@
 		align-items: flex-end;
 		width: 1200px;
 		height: 350px;
+		position: relative;
 	}
 
 	.banner-image {
@@ -51,6 +52,9 @@
 		display: flex;
 		gap: 1rem;
 		padding: 1rem;
+		position: absolute;
+		bottom: 0;
+		right: 0;
 	}
 
 	.project-link {
