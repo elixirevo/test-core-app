@@ -31,6 +31,37 @@
 
 <style>
 	.box-md {
-		width: calc(600px - 1rem);
+		min-width: calc(600px - 1rem);
+	}
+
+	@media (max-width: 1280px) {
+		/* FHD 대응 */
+		.box-md {
+			min-width: 50%;
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		/* 태블릿 대응 */
+		.box-md {
+			min-width: 100%;
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 768px) {
+		/* 모바일 대응 */
+		.box-md {
+			min-width: 100%;
+			width: 100%;
+			min-height: 500px;
+			/* max-height: 300px; */
+			height: 300px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		/* 모바일 대응 */
 	}
 </style>

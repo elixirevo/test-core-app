@@ -137,4 +137,32 @@
 	.core-button {
 		width: 60%;
 	}
+
+	@media (max-width: 1280px) {
+		/* FHD 대응 */
+		.box-md {
+			width: 100%;
+			height: fit-content;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		/* 태블릿 대응 */
+		.box-md {
+			width: 100%;
+			height: fit-content;
+		}
+	}
+
+	@media (max-width: 768px) {
+		/* 모바일 대응 */
+		.box-md {
+			width: 100%;
+			height: fit-content;
+		}
+	}
+
+	@media (max-width: 480px) {
+		/* 모바일 대응 */
+	}
 </style>

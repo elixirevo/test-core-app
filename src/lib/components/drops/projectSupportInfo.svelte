@@ -51,7 +51,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-		width: 90%;
+		width: 100%;
 	}
 
 	.box-content-top {
@@ -107,9 +107,6 @@
 		gap: 1rem;
 	}
 
-	.point-title {
-	}
-
 	.point-shorts {
 		width: 100%;
 		text-align: center;
@@ -125,5 +122,33 @@
 	.text-wrap {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	@media (max-width: 1280px) {
+		/* FHD 대응 */
+		.box-md {
+			width: 100%;
+			height: fit-content;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		/* 태블릿 대응 */
+		.box-md {
+			width: 100%;
+			height: fit-content;
+		}
+	}
+
+	@media (max-width: 768px) {
+		/* 모바일 대응 */
+		.box-md {
+			width: 100%;
+			height: fit-content;
+		}
+	}
+
+	@media (max-width: 480px) {
+		/* 모바일 대응 */
 	}
 </style>

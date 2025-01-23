@@ -10,7 +10,9 @@
 		<ProjectMain />
 	</div>
 	<div class="bottom-space">
-		<ProjectInfo />
+		<div class="bottom-left">
+			<ProjectInfo />
+		</div>
 		<div class="bottom-right">
 			<ProjectSupportInfo />
 			<ProjectSupportForm />
@@ -37,11 +39,67 @@
 		gap: 2rem;
 	}
 
+	.bottom-left {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
 	.bottom-right {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
 		gap: 2rem;
+	}
+
+	@media (max-width: 1280px) {
+		/* FHD 대응 */
+		.bottom-left {
+			width: 50%;
+		}
+
+		.bottom-right {
+			width: 50%;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		/* 태블릿 대응 */
+		.bottom-left {
+			width: 50%;
+		}
+
+		.bottom-right {
+			width: 50%;
+		}
+	}
+
+	@media (max-width: 768px) {
+		/* 모바일 대응 */
+		.bottom-space {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 100%;
+			gap: 2rem;
+		}
+
+		.bottom-left {
+			width: 100%;
+		}
+
+		.bottom-right {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: 2rem;
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 480px) {
+		/* 모바일 대응 */
 	}
 </style>
