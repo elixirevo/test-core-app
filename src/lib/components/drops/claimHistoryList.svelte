@@ -3,7 +3,7 @@
 </script>
 
 <div class="core-style-background box-lg">
-	<div class="box-title">Drops Claim</div>
+	<div class="box-title">Drops Claim History</div>
 	<div class="box-content">
 		{#each [1, 2, 3, 4, 5, 6, 7, 8, 9] as item}
 			<div class="claim-item">
@@ -29,7 +29,7 @@
 		{/each}
 	</div>
 	<div class="box-content-bottom">
-		<a class="text-link" href="/drops/claim/history">go to claim history</a>
+		<a class="text-link" href="/">go to claim history</a>
 	</div>
 </div>
 
