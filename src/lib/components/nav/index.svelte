@@ -5,6 +5,8 @@
 	import NavBar from '$lib/components/nav/navBar.svelte';
 	import NavMenu from '$lib/components/nav/navMenu.svelte';
 	import LoginModal from '../login/loginModal.svelte';
+	import { FRONT_LINK } from '$lib/constant/frontLink';
+	import { OUTSIDE_LINK } from '$lib/constant/outsideLink';
 
 	beforeNavigate(() => {
 		navMenuState.value = false;
@@ -22,28 +24,35 @@
 	};
 
 	const menuList = [
-		{ name: 'dashboard', link: '/dashboard', children: [] },
-		{ name: 'drops', link: '/drops', children: [] },
+		{ name: 'dashboard', link: FRONT_LINK.DASHBOARD, children: [] },
+		{
+			name: 'drops',
+			link: FRONT_LINK.DROPS,
+			children: [
+				{ name: 'claim', link: FRONT_LINK.DROPS_CLAIM },
+				{ name: 'claim history', link: FRONT_LINK.DROPS_CLAIM_HISTORY }
+			]
+		},
 		{
 			name: 'core',
-			link: '/core',
+			link: FRONT_LINK.CORE,
 			children: [
-				{ name: 'handover or keep', link: '/core/asset' },
-				{ name: 'asset retrieve', link: '/core/retireve' },
-				{ name: 'sale', link: '/core/sale' },
-				{ name: 'refferal', link: '/core/refferal' }
+				{ name: 'handover or keep', link: FRONT_LINK.CORE_ASSET },
+				{ name: 'asset retrieve', link: FRONT_LINK.CORE_RETRIEVE },
+				{ name: 'sale', link: FRONT_LINK.CORE_SALE },
+				{ name: 'refferal', link: FRONT_LINK.CORE_REFFEAL }
 			]
 		},
 		{
 			name: 'gear',
-			link: '/gear',
+			link: FRONT_LINK.GEAR,
 			children: [
-				{ name: 'mint cStable', link: '/gear/mint' },
-				{ name: 'lockup cStable', link: '/gear/lockup' }
+				{ name: 'mint cStable', link: FRONT_LINK.GEAR_MINT },
+				{ name: 'lockup cStable', link: FRONT_LINK.GEAR_LOOKUP }
 			]
 		},
-		{ name: 'launchpad', link: '/launchpad', children: [] },
-		{ name: 'docs', link: 'https://www.gitbook.com/', children: [] }
+		{ name: 'launchpad', link: FRONT_LINK.LAUNCHPAD, children: [] },
+		{ name: 'docs', link: OUTSIDE_LINK.CORE_DOCS, children: [] }
 	];
 </script>
 

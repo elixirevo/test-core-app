@@ -1,0 +1,16 @@
+export const FRONT_LINK = {
+  ROOT: '/',
+  DASHBOARD: '/dashboard',
+  DROPS: '/drops',
+  DROPS_CLAIM: '/drops/claim',
+  DROPS_CLAIM_HISTORY: '/drops/claim/history',
+  CORE: '/core',
+  CORE_ASSET: '/core/asset',
+  CORE_RETRIEVE: '/core/retrieve',
+  CORE_SALE: '/core/sale',
+  CORE_REFFEAL: '/core/reffeal',
+  GEAR: '/gear',
+  GEAR_MINT: '/gear/mint',
+  GEAR_LOOKUP: '/gear/lookup',
+  LAUNCHPAD: '/launchpad',
+}
