@@ -71,6 +71,10 @@
 		object-fit: cover;
 	}
 
+	.item-title {
+		text-align: start;
+	}
+
 	.item-description {
 		text-align: start;
 	}
