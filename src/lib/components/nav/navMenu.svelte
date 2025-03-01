@@ -8,7 +8,11 @@
 	<div class="menu-wrap">
 		{#each menuList as menu}
 			<div class="menu-content">
-				<a href={menu.link}>{menu.name.toUpperCase()}</a>
+				{#if menu.link.includes('http')}
+					<a href={menu.link} target="_blank">{menu.name.toUpperCase()}</a>
+				{:else}
+					<a href={menu.link}>{menu.name.toUpperCase()}</a>
+				{/if}
 				{#if menu.children.length > 0}
 					{#each menu.children as childrenMenu}
 						<div class="menu-child-content">
