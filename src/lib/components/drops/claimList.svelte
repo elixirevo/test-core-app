@@ -44,6 +44,7 @@
 		text-align: end;
 		font-size: 1.8rem;
 		font-weight: 500;
+		margin-bottom: 0.5rem;
 	}
 
 	.box-content {
