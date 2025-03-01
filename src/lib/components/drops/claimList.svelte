@@ -11,16 +11,16 @@
 					<div class="logo">
 						<img src={testLogo} alt="logo" />
 					</div>
-					<div class="tick">Arbitrum</div>
+					<div class="tick text-sm">Arbitrum</div>
 				</div>
 				<div class="sector">
 					<div class="logo">
 						<img src={testLogo} alt="logo" />
 					</div>
-					<div class="tick">Nectar</div>
+					<div class="tick text-sm">Nectar</div>
 				</div>
 				<div class="sector">
-					<div class="balance">1,000,000.222333</div>
+					<div class="balance text-sm">1,000K</div>
 				</div>
 				<div class="sector align-end">
 					<button class="claim-button">claim</button>
@@ -29,7 +29,7 @@
 		{/each}
 	</div>
 	<div class="box-content-bottom">
-		<a class="text-link" href="/drops/claim/history">go to claim history</a>
+		<a class="text-link text-sm" href="/drops/claim/history">Go to claim history</a>
 	</div>
 </div>
 
@@ -42,7 +42,7 @@
 	.box-title {
 		width: 100%;
 		text-align: end;
-		font-size: 2rem;
+		font-size: 1.8rem;
 		font-weight: 500;
 	}
 
@@ -60,6 +60,7 @@
 		display: flex;
 		justify-content: flex-end;
 		width: 900px;
+		margin-bottom: 30px;
 	}
 
 	.align-end {
@@ -102,5 +103,71 @@
 		padding: 0.2rem 0rem;
 		border-radius: 4px;
 		font-size: 1rem;
+	}
+
+	@media (max-width: 1280px) {
+		/* FHD 대응 */
+		.box-content-bottom {
+			display: flex;
+			justify-content: flex-end;
+			max-width: 900px;
+			width: 95%;
+		}
+		.claim-item {
+			display: grid;
+			grid-template-columns: 1fr 1fr 2fr 1fr;
+			max-width: 900px;
+			width: 100%;
+			height: auto;
+			padding: 0.8rem;
+			gap: 1rem;
+			background-color: var(--light);
+			border-radius: 0.5rem;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		/* 태블릿 대응 */
+	}
+
+	@media (max-width: 768px) {
+		/* 모바일 대응 */
+		.box-title {
+			width: 100%;
+			text-align: end;
+			font-size: 1.3rem;
+			font-weight: 500;
+		}
+		.logo {
+			display: flex;
+			justify-content: center;
+			width: 1.2rem;
+			height: 1.2rem;
+			background-color: red;
+			border-radius: 20px;
+			padding: 5px;
+		}
+
+		.claim-button {
+			background-color: var(--dark);
+			width: 4rem;
+			text-align: center;
+			padding: 0.2rem 0rem;
+			border-radius: 4px;
+			font-size: 0.9rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		/* 모바일 대응 */
+		.tick {
+			display: none;
+		}
+
+		.claim-item {
+			padding: 0.5rem;
+			gap: 0.5rem;
+			grid-template-columns: 0.5fr 1fr 2fr 1fr;
+		}
 	}
 </style>

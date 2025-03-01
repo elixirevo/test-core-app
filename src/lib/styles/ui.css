@@ -244,6 +244,12 @@
     padding: 4rem 2rem;
     margin-bottom: 1rem;
   }
+
+  .box-lg {
+    width: 100%;
+    margin-bottom: 1rem;
+    clip-path: polygon(0% 10%, 20% 0, 100% 0, 100% 90%, 85% 100%, 0% 100%);
+  }
 }
 
 @media (max-width: 480px) {
@@ -288,5 +294,9 @@
     min-height: 600px;
     box-sizing: border-box;
     margin-bottom: 1rem;
+  }
+
+  .box-lg {
+    height: calc(100% - 10px);
   }
 }
