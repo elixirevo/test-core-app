@@ -91,6 +91,9 @@
 		/* 모바일 대응 */
 		.box-md {
 			gap: 2rem;
+			width: 100%;
+			min-height: 500px;
+			box-sizing: border-box;
 		}
 	}
 

@@ -177,6 +177,11 @@
 
 	@media (max-width: 768px) {
 		/* 모바일 대응 */
+		.box-md {
+			width: 100%;
+			min-height: 500px;
+			box-sizing: border-box;
+		}
 		.box-content {
 			gap: 2rem;
 			overflow: scroll;

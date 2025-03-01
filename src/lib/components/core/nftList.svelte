@@ -82,4 +82,13 @@
 	.text-end {
 		text-align: end;
 	}
+
+	@media (max-width: 768px) {
+		/* 모바일 대응 */
+		.box-md {
+			width: 100%;
+			min-height: 500px;
+			box-sizing: border-box;
+		}
+	}
 </style>
