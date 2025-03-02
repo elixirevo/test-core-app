@@ -40,7 +40,7 @@
 				{ name: 'handover or keep', link: FRONT_LINK.CORE_ASSET },
 				{ name: 'asset retrieve', link: FRONT_LINK.CORE_RETRIEVE },
 				{ name: 'sale', link: FRONT_LINK.CORE_SALE },
-				{ name: 'refferal', link: FRONT_LINK.CORE_REFFEAL }
+				{ name: 'referral', link: FRONT_LINK.CORE_REFERRAL }
 			]
 		},
 		{

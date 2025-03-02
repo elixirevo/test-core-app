@@ -8,7 +8,7 @@ export const FRONT_LINK = {
   CORE_ASSET: '/core/asset',
   CORE_RETRIEVE: '/core/retrieve',
   CORE_SALE: '/core/sale',
-  CORE_REFFEAL: '/core/reffeal',
+  CORE_REFERRAL: '/core/referral',
   GEAR: '/gear',
   GEAR_MINT: '/gear/mint',
   GEAR_LOOKUP: '/gear/lookup',
