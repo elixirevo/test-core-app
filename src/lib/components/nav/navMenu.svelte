@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { navMenuState } from '$lib/states/nav.svelte';
-	import { capitalizeFirstLetter } from '$lib/util/text';
+	import { capitalizeFirstLetter } from '$lib/utils/text';
 	const { menuList } = $props();
 </script>
 

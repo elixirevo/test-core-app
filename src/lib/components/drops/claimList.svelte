@@ -1,12 +1,14 @@
 <script>
+	import { goto } from '$app/navigation';
 	import testLogo from '$lib/assets/logo/logo.png';
+	import { FRONT_PATH } from '$lib/constants/frontPath';
 </script>
 
 <div class="core-style-background box-lg">
 	<div class="box-title">Drops Claim</div>
 	<div class="box-content">
-		{#each [1, 2, 3, 4, 5, 6, 7, 8, 9] as item}
-			<div class="claim-item">
+		{#each [1, 2, 3, 4, 5, 6, 7, 8, 9] as item, index}
+			<div class="list-item">
 				<div class="sector">
 					<div class="logo">
 						<img src={testLogo} alt="logo" />
@@ -23,7 +25,7 @@
 					<div class="balance text-sm">1,000K</div>
 				</div>
 				<div class="sector align-end">
-					<button class="claim-button">claim</button>
+					<button class="claim-button" onclick={() => goto(`${FRONT_PATH.DROPS_CLAIM}/${index}`)}>claim</button>
 				</div>
 			</div>
 		{/each}
@@ -69,7 +71,7 @@
 		justify-content: flex-end;
 	}
 
-	.claim-item {
+	.list-item {
 		display: grid;
 		grid-template-columns: 1fr 1fr 2fr 1fr;
 		width: 900px;
@@ -114,7 +116,7 @@
 			max-width: 900px;
 			width: 95%;
 		}
-		.claim-item {
+		.list-item {
 			display: grid;
 			grid-template-columns: 1fr 1fr 2fr 1fr;
 			max-width: 900px;
@@ -165,7 +167,7 @@
 			display: none;
 		}
 
-		.claim-item {
+		.list-item {
 			padding: 0.5rem;
 			gap: 0.5rem;
 			grid-template-columns: 0.5fr 1fr 2fr 1fr;

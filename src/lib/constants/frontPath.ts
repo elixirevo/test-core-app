@@ -1,4 +1,4 @@
-export const FRONT_LINK = {
+export const FRONT_PATH = {
   ROOT: '/',
   DASHBOARD: '/dashboard',
   DROPS: '/drops',

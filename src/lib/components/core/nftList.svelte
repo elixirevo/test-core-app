@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { isOddOrEvne } from '$lib/util/num';
+	import { isOddOrEvne } from '$lib/utils/num';
 
 	const { userNftList } = $props();
 </script>
