@@ -11,6 +11,6 @@ export const FRONT_PATH = {
   CORE_REFERRAL: '/core/referral',
   GEAR: '/gear',
   GEAR_MINT: '/gear/mint',
-  GEAR_LOOKUP: '/gear/lookup',
+  GEAR_LOCKUP: '/gear/lockup',
   LAUNCHPAD: '/launchpad',
 }

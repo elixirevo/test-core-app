@@ -48,7 +48,7 @@
 			link: FRONT_PATH.GEAR,
 			children: [
 				{ name: 'mint cStable', link: FRONT_PATH.GEAR_MINT },
-				{ name: 'lockup cStable', link: FRONT_PATH.GEAR_LOOKUP }
+				{ name: 'lockup cStable', link: FRONT_PATH.GEAR_LOCKUP }
 			]
 		},
 		{ name: 'launchpad', link: FRONT_PATH.LAUNCHPAD, children: [] },
