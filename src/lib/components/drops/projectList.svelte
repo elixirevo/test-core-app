@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import thumbnailImage from '$lib/assets/test/thumbnail.png';
+	import { FRONT_PATH } from '$lib/constants/frontPath';
 </script>
 
 <div class="list-wrap">
@@ -11,8 +13,8 @@
 		<hr />
 	</div>
 	<div class="list-item-wrap">
-		{#each [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] as item}
-			<button class="item-box">
+		{#each [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] as item, index}
+			<button class="item-box" onclick={() => goto(`${FRONT_PATH.DROPS}/${index}`)}>
 				<img class="thumbnail-image" src={thumbnailImage} alt="img" />
 				<div class="item-title text-md">Project Name</div>
 				<div class="item-description">
