@@ -47,7 +47,7 @@
 			name: 'gear',
 			link: FRONT_PATH.GEAR,
 			children: [
-				{ name: 'mint cStable', link: FRONT_PATH.GEAR_MINT },
+				{ name: 'mint cStable', link: FRONT_PATH.GEAR_WRAP },
 				{ name: 'lockup cStable', link: FRONT_PATH.GEAR_LOCKUP }
 			]
 		},

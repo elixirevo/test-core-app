@@ -10,7 +10,7 @@ export const FRONT_PATH = {
   CORE_SALE: '/core/sale',
   CORE_REFERRAL: '/core/referral',
   GEAR: '/gear',
-  GEAR_MINT: '/gear/mint',
+  GEAR_WRAP: '/gear/wrap',
   GEAR_LOCKUP: '/gear/lockup',
   LAUNCHPAD: '/launchpad',
 }
