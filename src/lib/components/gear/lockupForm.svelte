@@ -156,17 +156,6 @@
 		font-size: 0.9rem;
 	}
 
-	.input-alert-wrap {
-		display: flex;
-		height: 1rem;
-	}
-
-	.alert-text {
-		color: var(--error-alert);
-		width: 100%;
-		text-align: right;
-	}
-
 	.button-box {
 		display: flex;
 		flex-direction: column;
