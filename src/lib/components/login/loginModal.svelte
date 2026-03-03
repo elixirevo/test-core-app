@@ -3,10 +3,10 @@
 	import Box from '$lib/assets/ui/box.png';
 	import { fly } from 'svelte/transition';
 	import Google from '../icons/GoogleLogo.svelte';
-	import Mail from '../icons/Mail.svelte';
+	import Mail from '../icons/mail.svelte';
 	import XIcon from '../icons/XLogo.svelte';
 	import XMark from '../icons/XMark.svelte';
-	import ChevronLeft from '../icons/ChevronLeft.svelte';
+	import ChevronLeft from '../icons/chevronLeft.svelte';
 	let step = 1;
 </script>
 
