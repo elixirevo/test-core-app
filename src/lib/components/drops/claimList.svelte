@@ -31,7 +31,7 @@
 		{/each}
 	</div>
 	<div class="box-content-bottom">
-		<a class="text-link text-sm" href="/drops/claim/history">Go to claim history</a>
+		<a class="text-link text-sm" href={FRONT_PATH.DROPS_CLAIM_HISTORY}>Go to claim history</a>
 	</div>
 </div>
 

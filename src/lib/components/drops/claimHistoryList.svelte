@@ -1,5 +1,6 @@
 <script>
 	import testLogo from '$lib/assets/logo/logo.png';
+	import { FRONT_PATH } from '$lib/constants/frontPath';
 </script>
 
 <div class="core-style-background box-lg">
@@ -29,7 +30,7 @@
 		{/each}
 	</div>
 	<div class="box-content-bottom">
-		<a class="text-link" href="/">go to claim history</a>
+		<a class="text-link" href={FRONT_PATH.ROOT}>go to claim history</a>
 	</div>
 </div>
 

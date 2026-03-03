@@ -4,6 +4,7 @@
 	import ChevronDownIcon from '$lib/components/icons/ChevronDown.svelte';
 	import logo from '$lib/assets/logo/logo.png';
 	import profileImage from '$lib/assets/test/profile_image.png';
+	import { FRONT_PATH } from '$lib/constants/frontPath';
 	import UserProfile from './userProfile.svelte';
 
 	const { userInfo, walletInfo, menuList } = $props();
@@ -26,7 +27,7 @@
 
 <nav class="vision-style-background">
 	<div class="logo-wrap">
-		<a href="/">
+		<a href={FRONT_PATH.ROOT}>
 			<img src={logo} alt="Logo" width="50" height="50" />
 		</a>
 	</div>

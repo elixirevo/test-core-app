@@ -1,5 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { FRONT_PATH } from '$lib/constants/frontPath';
 
 	const { walletAssetList } = $props();
 </script>
@@ -11,13 +12,13 @@
 	<div class="box-content">
 		<div class="box-content-bottom">
 			{#each walletAssetList as item}
-				<button
-					class="asset-box"
-					type="button"
-					onclick={() => {
-						goto(`/core/asset/${item.id}`);
-					}}
-				>
+					<button
+						class="asset-box"
+						type="button"
+						onclick={() => {
+							goto(`${FRONT_PATH.CORE_ASSET}/${item.id}`);
+						}}
+					>
 					<div class="asset-tier text-sm">{item.tier}</div>
 					<div class="asset-title text-md">{item.title}</div>
 				</button>
@@ -48,15 +49,15 @@
 		gap: 1rem;
 	}
 
-	.asset-box {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		width: 100%;
-		height: 90px;
-		background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-			url('/src/lib/assets/collection/sample.jpg');
+		.asset-box {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 100%;
+			height: 90px;
+			background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+				url('$lib/assets/collection/sample.jpg');
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
