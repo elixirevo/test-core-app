@@ -2,7 +2,7 @@
 	// import { isMenuOpen } from '$lib/states/nav.svelte';
 	import { navMenuState } from '$lib/states/nav.svelte';
 	import { beforeNavigate } from '$app/navigation';
-	import NavBar from '$lib/components/nav/navBar.svelte';
+	import NavBar from '$lib/components/nav/navbar.svelte';
 	import NavMenu from '$lib/components/nav/navMenu.svelte';
 	import LoginModal from '../login/loginModal.svelte';
 	import { FRONT_PATH } from '$lib/constants/frontPath';
